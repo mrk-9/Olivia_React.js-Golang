@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+$text: #454553;
+$lightText: #8C949A;
+$blue: #4AA0D5;
+$bg: #F9FAFB;
+$placeholder: #91A5B4;
+$border: #EAEFF2;
+$red: #D96767;
+$moreRed: #C15959;
+
+@mixin shadow() {
+  box-shadow: 0px 3px 6px 0 rgba(0, 0, 0, .05);
+}
+
+@mixin shadow-big() {
+  box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, .05);
+}
+
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #F9FAFB;font-family: Open Sans, sans-serif;">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body style="background-color: #F9FAFB;font-family: Open Sans, sans-serif;padding-top: 81px;">
+<div class="logo" style="width: 141px;height: 27px;margin: 0 auto 60px;background-image: url(http://getolivia.co/dist/logo.png);background-repeat: no-repeat;background-position: center;"></div>
+<div class="content" style="width: 379px;margin: 0 auto 0;padding: 33px 39px;box-sizing: border-box;background-color: #ffffff;box-shadow: 0px 3px 6px #0000000e;">
+	{{ if .NeedsAssistance }}
+		<h2 style="margin: 0;padding: 0;font-size: 16px;font-weight: 600;color: #ADBCC7;">Needs Assistance</h2>
+
+		<div class="block" style="padding-bottom: 12px;margin: 12px 0 24px;border-bottom: 1px solid #EAEFF2;">
+			{{ range .NeedsAssistance }}
+				<div class="user" style="padding: 12px 0;">
+					<div class="avatar" style="width: 64px;height: 64px;margin-right: 16px;border-radius: 50%;color: #ffffff;font-size: 23px;font-weight: 600;line-height: 64px;text-align: center;background-color: #292929;float: left;">{{ .Initials }}</div>
+					<div class="info" style="width: 209px;float: left;">
+						<div class="name" style="color: #454553;font-size: 14px;font-weight: 700;">{{ .Name }}</div>
+						<div class="interest" style="color: #91A5B4;font-size: 13px;">Interested in property at {{ .Property }}</div>
+						<a href="http://getolivia.co/home?chat={{ .ID }}" class="button" style="display: block;width: 87px;height: 24px;margin-top: 6px;border: 1px solid #4AA0D5;border-radius: 12px;font-size: 12px;color: #4AA0D5;line-height: 24px;box-sizing: border-box;text-align: center;text-decoration: none;">See details</a>
+					</div>
+
+					<div class="clear" style="clear: both;"></div>
+				</div>
+			{{ end }}
+		</div>
+	{{ end }}
+
+	{{ if .SlippingAway }}
+		<h2 style="margin: 0;padding: 0;font-size: 16px;font-weight: 600;color: #ADBCC7;">Slipping Away</h2>
+
+		<div class="block" style="padding-bottom: 12px;margin: 12px 0 24px;border-bottom: 1px solid #EAEFF2;">
+			{{ range .SlippingAway }}
+				<div class="user" style="padding: 12px 0;">
+					<div class="avatar" style="width: 64px;height: 64px;margin-right: 16px;border-radius: 50%;color: #ffffff;font-size: 23px;font-weight: 600;line-height: 64px;text-align: center;background-color: #292929;float: left;">{{ .Initials }}</div>
+					<div class="info" style="width: 209px;float: left;">
+						<div class="name" style="color: #454553;font-size: 14px;font-weight: 700;">{{ .Name }}</div>
+						<div class="interest" style="color: #91A5B4;font-size: 13px;">Interested in property at {{ .Property }}</div>
+						<a href="http://getolivia.co/home?chat={{ .ID }}" class="button" style="display: block;width: 87px;height: 24px;margin-top: 6px;border: 1px solid #4AA0D5;border-radius: 12px;font-size: 12px;color: #4AA0D5;line-height: 24px;box-sizing: border-box;text-align: center;text-decoration: none;">See details</a>
+					</div>
+
+					<div class="clear" style="clear: both;"></div>
+				</div>
+			{{ end }}
+		</div>
+	{{ end }}
+
+	{{ if .NewProspects }}
+		<h2 style="margin: 0;padding: 0;font-size: 16px;font-weight: 600;color: #ADBCC7;">New Prospects</h2>
+
+		<div class="block" style="padding-bottom: 12px;margin: 12px 0 24px;border-bottom: 1px solid #EAEFF2;">
+			{{ range .NewProspects }}
+				<div class="user" style="padding: 12px 0;">
+					<div class="avatar" style="width: 64px;height: 64px;margin-right: 16px;border-radius: 50%;color: #ffffff;font-size: 23px;font-weight: 600;line-height: 64px;text-align: center;background-color: #292929;float: left;">{{ .Initials }}</div>
+					<div class="info" style="width: 209px;float: left;">
+						<div class="name" style="color: #454553;font-size: 14px;font-weight: 700;">{{ .Name }}</div>
+						<div class="interest" style="color: #91A5B4;font-size: 13px;">Interested in property at {{ .Property }}</div>
+						<a href="http://getolivia.co/home?chat={{ .ID }}" class="button" style="display: block;width: 87px;height: 24px;margin-top: 6px;border: 1px solid #4AA0D5;border-radius: 12px;font-size: 12px;color: #4AA0D5;line-height: 24px;box-sizing: border-box;text-align: center;text-decoration: none;">See details</a>
+					</div>
+
+					<div class="clear" style="clear: both;"></div>
+				</div>
+			{{ end }}
+		</div>
+	{{ end }}
+</div>
+<div class="footer" style="margin: 47px auto 0px;padding-bottom: 78px;color: #B0BFC9;font-size: 13px;text-align: center;">© 2017 Olivia</div>
+</body>
+</html>
